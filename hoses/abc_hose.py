@@ -232,8 +232,3 @@ class Hose(AbcHose):
     def description(self):
         return self._description
     
-fiftyone = Hose()
-fiftyone.number, fiftyone.lenght, fiftyone.pressure, fiftyone.resistance, fiftyone.throughput_rate, fiftyone.weight \
-    = 34, 15, 16, 0.013, 11, 0.43
-
-pass
