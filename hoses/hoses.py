@@ -14,7 +14,7 @@ class FiftyOneHose(Hose):
         self.throughput_rate = 11
         self.weight = 0.45
         self.status = None
-        self.discription = "OK"
+        self.description = "OK"
         
 class HoseFabric:
     

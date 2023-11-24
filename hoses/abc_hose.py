@@ -222,3 +222,16 @@ class Hose(AbcHose):
     def description(self):
         return self._description
     
+    def __dict__(self):
+        return {
+            'pk': self.pk,
+            'number': self.number,
+            'lenght': self.lenght,
+            'diameter': self.diameter,
+            'pressure': self.pressure,
+            'resistance': self.resistance,
+            'throughput_rate': self.throughput_rate,
+            'weight': self.weight,
+            'status': self.status,
+            'description': self.description
+        }
