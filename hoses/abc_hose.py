@@ -11,7 +11,6 @@ class AbcHose(metaclass=ABCMeta):
     def number():
         pass
     
-    
     @property
     def lenght():
         pass
@@ -70,7 +69,6 @@ class Hose(AbcHose):
         self.status = None
         self.discription = None
         super()
-        
     
     @property
     def pk(self):
@@ -88,7 +86,6 @@ class Hose(AbcHose):
     def pk(self):
         return self._pk
     
-    
     @property
     def number(self):
         """
@@ -103,7 +100,6 @@ class Hose(AbcHose):
     @number.getter
     def number(self):
         return self._number
-    
     
     @property
     def lenght(self):
@@ -121,7 +117,6 @@ class Hose(AbcHose):
     def lenght(self):
         return self._lenght
     
-    
     @property
     def diameter(self):
         """
@@ -136,7 +131,6 @@ class Hose(AbcHose):
     @diameter.getter
     def diameter(self):
         return self._diameter
-    
     
     @property
     def pressure(self):
@@ -153,7 +147,6 @@ class Hose(AbcHose):
     def pressure(self):
         return self._pressure
 
-
     @property
     def throughput_rate(self):
         """
@@ -168,7 +161,6 @@ class Hose(AbcHose):
     @throughput_rate.getter
     def throughput_rate(self):
         return self._throughput_rate
-  
   
     @property
     def resistance(self):
@@ -185,7 +177,6 @@ class Hose(AbcHose):
     def resistance(self):
         return self._resistance
     
-    
     @property
     def weight(self):
         """
@@ -200,7 +191,6 @@ class Hose(AbcHose):
     @weight.getter
     def weight(self):
         return self._weight
-    
     
     @property
     def status(self):
@@ -232,3 +222,16 @@ class Hose(AbcHose):
     def description(self):
         return self._description
     
+    def __dict__(self):
+        return {
+            'pk': self.pk,
+            'number': self.number,
+            'lenght': self.lenght,
+            'diameter': self.diameter,
+            'pressure': self.pressure,
+            'resistance': self.resistance,
+            'throughput_rate': self.throughput_rate,
+            'weight': self.weight,
+            'status': self.status,
+            'description': self.description
+        }
