@@ -1,0 +1,18 @@
+version: "1.0"
+services:
+  postgres:
+    image: postgres:13.3
+    environment:
+      POSTGRES_DB: "hoses"
+      POSTGRES_USER: "hoseuser"
+      POSTGRES_PASSWORD: "hoseuser244"
+    volumes:
+      - ./docker-entrypoint-initdb.sql
+    ports:
+      - "5432:5432"
+  
+  service:
+    build:
+      context: service/
+      dockerfile: Dockerfile
+      image: hosemover/1.0
